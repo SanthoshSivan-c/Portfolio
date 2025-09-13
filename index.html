@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <title>Portfolio</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "NzusmmIGNmhJHsHpq",
+      });
+    })();
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">Santhosh</a>
+    <i class="bi bi-list" id="menu-icon"></i>
+    <nav class="navbar">
+      <i class="bi bi-x-circle-fill" id="close-icon"></i>
+      <div class="sidebar-profile">
+        <img src="/images/InFrame_1745345184539.jpg" alt="Profile Photo">
+        <h3>Santhosh Sivan C</h3>
+      </div>
+      <a href="#about" class="active">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skill</a>
+      <a href="#projects">Project</a>
+      <a href="#contact">Contact</a>
+      
+      <div class="sidebar-accounts">
+        <a href="http://www.linkedin.com/in/santhosh-sivan-c-67662b322"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/SanthoshSivan-c" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </nav>
+  </header>
+  
+  <div id="overlay"></div>
+
+  <section class="about" id="about">
+    <div class="about-con">
+      <h3>Hello, I am</h3>
+      <h1>Santhosh Sivan C</h1>
+      <p>
+        I am an Electronics and Communication Engineering graduate with a strong foundation in programming and software
+        development.Skilled in Java, SQL, HTML5, CSS3, and JavaScript, with a passion for building efficient solutions
+        and problem-solving. Continuously expanding my knowledge in modern technologies and eager to contribute to team
+        success through both my existing and growing skill set.
+      </p>
+      <div class="accounts">
+        <a href="http://www.linkedin.com/in/santhosh-sivan-c-67662b322"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/SanthoshSivan-c"><i class="bi bi-github"></i></a>
+      </div>
+      <a href="/download_files/Santhosh.pdf" class="btn" download>Download Resume</a>
+    </div>
+    <div class="image">
+      <img src="/images/InFrame_1745345184539.jpg" alt="Profile Photo">
+    </div>
+  </section>
+  
+  <section class="education" id="education">
+    <h2 class="heading">My <span>Education</span></h2>
+    <div class="education-con">
+      <div class="education-grid">
+
+        <div class="education-box left">
+          <h4>B.E Electronics and Communication Engineering</h4>
+          <p>Government College of Engineering, Dharmapuri (2021 – 2025)</p>
+          <p><b>CGPA:</b> 7.2</p>
+        </div>
+
+        <div class="education-box right">
+          <h4>HSC</h4>
+          <p>Kalaikovil Vidhya Mandir Matriculation Hr. Sec. School (2020 – 2021)</p>
+          <p><b>Percentage:</b> 90.6%</p>
+        </div>
+
+        <div class="education-box left">
+          <h4>SSLC</h4>
+          <p>Kalaikovil Vidhya Mandir Matriculation Hr. Sec. School (2018 – 2019)</p>
+          <p><b>Percentage:</b> 90.8%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h3 class="sub-heading">Technical <span>Skills</span></h3>
+
+    <div class="circle-skills">
+      <div class="circle-card">
+        <div class="circle" data-progress="90">
+          <i class="fa-brands fa-java"></i>
+        </div>
+        <h4>Java</h4>
+      </div>
+
+      <div class="circle-card">
+        <div class="circle" data-progress="80">
+          <i class="bi bi-database"></i>
+        </div>
+        <h4>SQL</h4>
+      </div>
+
+      <div class="circle-card">
+        <div class="circle" data-progress="85">
+          <i class="bi bi-filetype-html"></i>
+        </div>
+        <h4>HTML</h4>
+      </div>
+
+      <div class="circle-card">
+        <div class="circle" data-progress="80">
+          <i class="bi bi-palette"></i>
+        </div>
+        <h4>CSS</h4>
+      </div>
+
+      <div class="circle-card">
+        <div class="circle" data-progress="75">
+          <i class="bi bi-filetype-js"></i>
+        </div>
+        <h4>JavaScript</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2 class="heading">My <span>Projects</span></h2>
+
+    <div class="project-box">
+      <div class="project">
+        <img src="/images/bank.jpeg" alt="Banking Management System">
+        <h3>Bank Management System</h3>
+        <p>A Java (JDBC & Servlet) & SQL-based application designed to manage the banking Operations .</p>
+        <a href="/download_files/Banking-System-With-JDBC-and-Servlet-main (1).zip" class="btn" download>View Project</a>
+      </div>
+
+      <div class="project">
+        <img src="/images/OIP.jpg" alt="Login_Management">
+        <h3>Login Management System</h3>
+        <p>Java (JDBC & Servlet) & SQL-based system to manage users login.</p>
+        <a href="/download_files/Login-Mangement-Using-JDBC-Servlet.-main.zip" class="btn" download>View Project</a>
+      </div>
+
+      <div class="project">
+        <img src="/images/portfolio-logo-png-transparent.jpg" alt="Portfolio Website">
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+        <a href="/download_files/My_portfolio.zip" class="btn" download>View Project</a>
+      </div>
+
+      <div class="project">
+        <img src="/images/bank(1).jpeg" alt="Bank">
+        <h3>Banking System</h3>
+        <p>A basic Banking System made with concepts of OOP's to make transactions and account creations. </p>
+        <a href="/download_files/Bank-Management-System--main.zip" class="btn" download>View Project</a>
+      </div>
+
+      <div class="project">
+        <img src="/images/aiml.jpeg" alt="Weather">
+        <h3>AI-Based Visual Product Identification</h3>
+        <p>AI-based visual product identification uses computer vision to automatically recognize and classify products
+          in real time.</p>
+        <a href="/download_files/AI-BASED-VISUAL-PRODUCT-IDENTIFICATION-main.zip" class="btn" download>View Project</a>
+      </div>
+
+      <div class="project">
+        <img src="/images/weather-icons-set-white-background-vector-eps-55863134.jpg" alt="Weather">
+        <h3>Weather Web Application</h3>
+        <p>A web application that fetches live weather data using an API.</p>
+        <a href="/download_files/Weather-Web-Application-main.zip" class="btn" download>View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+      <div class="contact-con">
+        <form id="contact-form">
+          <div class="input-box">
+            <input type="text" id="user_name" name="user_name" placeholder="Enter Name" required>
+            <input type="email" id="user_email" name="user_email" placeholder="Enter your email" required>
+          </div>
+          <textarea id="user_message" name="user_message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+  </section>
+
+  <div id="successPopup" class="popup">
+    <div class="popup-content">
+      <div class="tick"><i class="bi bi-check-circle-fill tick"></i></div>
+      <h2>Email has been sent successfully!</h2>
+      <button id="closePopup">OK</button>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="container text-center">
+      <p>© 2025 Santhosh Sivan C | All Rights Reserved</p>
+      <p>
+        <i class="bi bi-envelope-fill"></i> santhoshsivan7781@email.com | 
+        <i class="bi bi-telephone-fill"></i> +91 9489290863 | 
+        <i class="bi bi-geo-alt-fill"></i> Bangalore, India
+      </p>
+      <a href="#about" class="back-to-top">
+        <i class="bi bi-arrow-up-circle-fill"></i>
+      </a>
+    </div>
+  </footer>
+  
+  <script src="web.js"></script>
+
+</body>
+
+</html>
