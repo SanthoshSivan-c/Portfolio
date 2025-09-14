@@ -1,20 +1,49 @@
+// ✅ Change header color on scroll
 window.addEventListener("scroll", function () {
-    const header = document.querySelector(".header");
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  
-    let navbar = document.querySelector(".navbar");
-    let overlay = document.querySelector("#overlay");
-    if (navbar.classList.contains("active")) {
-      navbar.classList.remove("active");
-      overlay.classList.remove("active");
-    }
-  });
-  
-  document.getElementById('contact-form').addEventListener('submit', sendmail);
+  const header = document.querySelector(".header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+
+  const navbar = document.querySelector(".navbar");
+  const overlay = document.querySelector("#overlay");
+  if (navbar.classList.contains("active")) {
+    navbar.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+});
+
+// ✅ Sidebar open
+function openSidebar() {
+  const sidebar = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("overlay");
+  const menuIcon = document.getElementById("menu-icon"); // hamburger icon
+
+  sidebar.classList.add("active");
+  overlay.classList.add("active");
+  menuIcon.style.display = "none"; // hide hamburger
+}
+
+// ✅ Sidebar close
+function closeSidebar() {
+  const sidebar = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("overlay");
+  const menuIcon = document.getElementById("menu-icon"); // hamburger icon
+
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+  menuIcon.style.display = "block"; // show hamburger again
+}
+
+
+// ✅ Overlay click also closes menu
+document.getElementById("overlay").addEventListener("click", closeSidebar);
+document.getElementById("close-menu").addEventListener("click", closeSidebar);
+
+// ✅ Contact form (EmailJS)
+document.getElementById('contact-form').addEventListener('submit', sendmail);
   function sendmail(event) {
     event.preventDefault();
   
@@ -32,46 +61,9 @@ window.addEventListener("scroll", function () {
         alert("Failed to send your message. Please try again.");
       });
   }
-  
-  document.getElementById("closePopup").addEventListener("click", function () {
-    document.getElementById("successPopup").style.display = "none";
-  });
-  
-  let menu = document.querySelector('#menu-icon');
-  let navbar = document.querySelector('.navbar');
-  let closeIcon = document.querySelector('#close-icon');
-  let overlay = document.querySelector('#overlay');
-  
-  menu.onclick = () => {
-    navbar.classList.add('active');
-    overlay.classList.add('active');
-  };
-  
-  closeIcon.onclick = () => {
-    navbar.classList.remove('active');
-    overlay.classList.remove('active');
-  };
-  
-  overlay.onclick = () => {
-    navbar.classList.remove('active');
-    overlay.classList.remove('active');
-  };
-  
-  document.querySelectorAll('.navbar a').forEach(link => {
-    link.onclick = () => {
-      navbar.classList.remove('active');
-      overlay.classList.remove('active');
-    };
-  });
 
-  document.addEventListener("click", (e) => {
-    if (
-      navbar.classList.contains("active") &&
-      !navbar.contains(e.target) &&
-      !menu.contains(e.target) &&
-      !closeIcon.contains(e.target)
-    ) {
-      navbar.classList.remove("active");
-      overlay.classList.remove("active");
-    }
-  });
+// ✅ Close success popup
+document.getElementById("closePopup").addEventListener("click", function () {
+  document.getElementById("successPopup").style.display = "none";
+});
+
