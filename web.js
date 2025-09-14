@@ -1,4 +1,3 @@
-// ✅ Change header color on scroll
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".header");
   if (window.scrollY > 50) {
@@ -15,34 +14,29 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// ✅ Sidebar open
 function openSidebar() {
   const sidebar = document.getElementById("mobile-menu");
   const overlay = document.getElementById("overlay");
-  const menuIcon = document.getElementById("menu-icon"); // hamburger icon
+  const menuIcon = document.getElementById("menu-icon"); 
 
   sidebar.classList.add("active");
   overlay.classList.add("active");
-  menuIcon.style.display = "none"; // hide hamburger
+  menuIcon.style.display = "none"; 
 }
 
-// ✅ Sidebar close
 function closeSidebar() {
   const sidebar = document.getElementById("mobile-menu");
   const overlay = document.getElementById("overlay");
-  const menuIcon = document.getElementById("menu-icon"); // hamburger icon
+  const menuIcon = document.getElementById("menu-icon"); 
 
   sidebar.classList.remove("active");
   overlay.classList.remove("active");
-  menuIcon.style.display = "block"; // show hamburger again
+  menuIcon.style.display = "block"; 
 }
 
-
-// ✅ Overlay click also closes menu
 document.getElementById("overlay").addEventListener("click", closeSidebar);
 document.getElementById("close-menu").addEventListener("click", closeSidebar);
 
-// ✅ Contact form (EmailJS)
 document.getElementById('contact-form').addEventListener('submit', sendmail);
   function sendmail(event) {
     event.preventDefault();
@@ -62,7 +56,6 @@ document.getElementById('contact-form').addEventListener('submit', sendmail);
       });
   }
 
-// ✅ Close success popup
 document.getElementById("closePopup").addEventListener("click", function () {
   document.getElementById("successPopup").style.display = "none";
 });
